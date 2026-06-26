@@ -798,6 +798,26 @@ a.news-item:focus-visible {
   font-weight: 950;
 }
 
+.news-item[data-pinned="true"] .section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.news-item[data-pinned="true"] .section-kicker::after {
+  content: "Pinned";
+  display: inline-block;
+  padding: 3px 8px;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  background: var(--iu-crimson);
+  border-radius: 3px;
+}
+
 .news-item p:not(.section-kicker) {
   margin: 10px 0 0;
   color: var(--muted-ink);
