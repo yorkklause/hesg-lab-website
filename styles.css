@@ -451,8 +451,22 @@ address,
 
 .intro-copy .lead {
   color: var(--ink);
-  font-size: 1.2rem;
-  font-weight: 760;
+  font-size: clamp(1.06rem, 1.35vw, 1.22rem);
+  font-weight: 650;
+  line-height: 1.38;
+}
+
+.intro-copy #intro-title {
+  font-size: clamp(2.05rem, 3vw, 2.85rem);
+  line-height: 1.1;
+}
+
+.intro-copy .affiliation-line {
+  max-width: 760px;
+  color: var(--muted-ink);
+  font-size: 1.02rem;
+  font-weight: 650;
+  line-height: 1.42;
 }
 
 .intro-copy p + p {
@@ -986,9 +1000,14 @@ a.news-item:focus-visible {
   margin-bottom: 8px;
 }
 
+.pi-card h3 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.15;
+}
+
 .pi-card .pi-title {
   color: var(--ink);
-  font-size: 1.18rem;
+  font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.42;
 }
