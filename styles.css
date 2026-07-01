@@ -451,22 +451,14 @@ address,
 
 .intro-copy .lead {
   color: var(--ink);
-  font-size: clamp(1.06rem, 1.35vw, 1.22rem);
-  font-weight: 650;
-  line-height: 1.38;
+  font-size: 1.2rem;
+  font-weight: 760;
 }
 
 .intro-copy #intro-title {
-  font-size: clamp(2.05rem, 3vw, 2.85rem);
+  margin: 14px 0 22px;
+  font-size: clamp(2.05rem, 3vw, 2.75rem);
   line-height: 1.1;
-}
-
-.intro-copy .affiliation-line {
-  max-width: 760px;
-  color: var(--muted-ink);
-  font-size: 1.02rem;
-  font-weight: 650;
-  line-height: 1.42;
 }
 
 .intro-copy p + p {
