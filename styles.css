@@ -913,6 +913,27 @@ a.news-item:focus-visible {
   color: var(--muted-ink);
 }
 
+.citation-toggle {
+  display: inline;
+  margin-left: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--iu-crimson);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 850;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.citation-toggle:hover,
+.citation-toggle:focus-visible {
+  color: var(--crimson-dark);
+  outline: none;
+}
+
 .people-grid {
   display: grid;
   grid-template-columns: minmax(0, 900px);

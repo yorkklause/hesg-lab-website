@@ -40,3 +40,21 @@ if (newsList) {
     .sort((a, b) => Number(b.pinned) - Number(a.pinned) || b.timestamp - a.timestamp || a.index - b.index)
     .forEach(({ item }) => newsList.appendChild(item));
 }
+
+document.querySelectorAll("[data-citation-toggle]").forEach((button) => {
+  const citation = button.closest("[data-expandable-citation]");
+  const shortCitation = citation?.querySelector("[data-citation-short]");
+  const fullCitation = citation?.querySelector("[data-citation-full]");
+
+  if (!shortCitation || !fullCitation) {
+    return;
+  }
+
+  button.addEventListener("click", () => {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    shortCitation.hidden = !isExpanded;
+    fullCitation.hidden = isExpanded;
+    button.textContent = isExpanded ? "Show more" : "Show less";
+  });
+});
